@@ -5,7 +5,6 @@ log*/
 .rebar/
 .rebar3/
 rebar.lock
-priv/templates-compiled/
 Deathray.db/
 _*
 *.beam
