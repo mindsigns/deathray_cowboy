@@ -6,6 +6,7 @@ log*/
 .rebar3/
 rebar.lock
 Deathray.db/
+priv/static/images/*
 _*
 *.beam
 .erlang.cookie
