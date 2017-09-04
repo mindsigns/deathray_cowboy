@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Deathray.TV : {{ pagetitle }} </title>
+    <meta name="description" content="Civil and simple, but set the freak show Loose on the nipple, watch her whole fucking titty ripple">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" media="screen">
+  </head>
+  <body>
+    <div class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <a href="../" class="navbar-brand">Deathray TV</a>
+          <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="/archive">archive</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/about">about</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/contact">contact</a> </li>
+          </ul>
+
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#top">Back to Top</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+	<div class="container" >
+	<div class="col-md-6">
+<br />
+<br />
+<br />
+<br />
+{% block body %}
+  {% for entry in entries %}
+    <div class="card no-gutters">
+  <h5 class="card-header"> {{ entry.title }}</h5>
+        {% if entry.image %}
+      	<a href="/transmit/{{entry.id}}">
+            <img style="width: 100%;" alt="{{ entry.image }}" src="/static/images/{{ entry.image}}" />
+  		</a>
+        {% endif %}
+  <div class="card-block">
+    <p class="card-text">
+    {% autoescape off %}
+        {{ entry.text | linebreaksbr }} <br />
+    {% endautoescape %}
+	</p>
+  </div>
+  <div class="card-footer text-muted text-xs-center">
+   {{ entry.pubdate }} 
+  </div>
+</div>
+<br />
+  {% endfor %}
+
+<nav class="mx-auto" style="width: 200px;">
+  	<ul class="pagination mx-auto">
+		<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+		<li class="page-item"><a class="page-link" href="/channel/1">Next</a></li>
+	</ul>
+</nav>
+
+{% endblock %}
+
+    </div>
+    </div>
+
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootswatch.js"></script>
+
+  </body>
+</html>

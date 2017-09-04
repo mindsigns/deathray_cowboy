@@ -1,0 +1,31 @@
+{% extends "base.dtl" %}   
+
+{% block body %}
+  {% for entry in entries %}
+  <div class="well clearfix">
+      <div class="media">
+      	<a class="pull-left" href="/transmit/{{entry.id}}">
+        {% if entry.image %}
+            <img class="media-object" src="/static/images/{{ entry.image}}" />
+        {% endif %}
+  		</a>
+  		<div class="media-body">
+            <h4 class="media-heading">{{ entry.title}}</h4>
+          <p class="text-right"></p>
+          <p>
+{% autoescape off %}
+            {{ entry.text | linebreaks }} <br />
+{% endautoescape %}
+          </p>
+            <ul class="list-inline list-unstyled">
+                <li><span><i>:: </i>{{ entry.pubdate }} </span></li>
+        </ul>
+       </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

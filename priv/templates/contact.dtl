@@ -1,0 +1,20 @@
+{% extends "base.dtl" %}   
+
+{% block body %}
+<br />
+<div class="row">
+<div class="col-md-9">
+<div class="panel panel-primary">
+      <div class="panel-heading">
+          <h2 class="panel-title">{{ pagetitle }}</h2>
+      </div>
+      <div class="panel-body">
+        <p>
+            01110011011101000110000101110010011001010100000001100100011001010110 <br />
+            00010111010001101000011100100110000101111001001011100111010001110110
+        </p>
+      </div>
+</div>
+</div>
+</div>
+{% endblock %}

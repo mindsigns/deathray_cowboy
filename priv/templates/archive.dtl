@@ -1,0 +1,23 @@
+{% extends "base.dtl" %}   
+
+{% block body %}
+<br />
+<div class="row">
+<div class="col-md-9">
+<div class="panel panel-primary">
+      <div class="panel-heading">
+          <h2 class="panel-title">{{ pagetitle }}</h2>
+      </div>
+      <div class="panel-body">
+
+  {% for entry in entries %}
+  <div class="row">
+        <div class="col-md-3">{{ entry.pubdate }} -></div>
+        <div class="col-md-6"><a href="/transmit/{{ entry.id }}"> {{ entry.title }} </a></div>
+    </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

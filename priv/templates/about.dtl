@@ -1,0 +1,27 @@
+{% extends "base.dtl" %}   
+
+{% block body %}
+<br />
+<div class="row">
+<div class="col-md-9">
+<div class="panel panel-primary">
+      <div class="panel-heading">
+          <h2 class="panel-title"></h2>
+      </div>
+      <div class="panel-body">
+        <p>The death ray or death beam was a theoretical particle beam or electromagnetic weapon of the 1920s through the 1930s ...</p>
+
+        <p>Commercially available since the late 1920s, the television set has become commonplace in homes, businesses and institutions, particularly as a vehicle for advertising, a source of entertainment, and news. </p>
+<div class="date"><i>Both entries ripped from wikipedia.</i></div>
+
+<center><h2> . . . . . . . . . . . . . . . . . . . . .  </h2></center>
+
+        <p>This site runs on <a href="http://www.openbsd.org">OpenBSD</a> and is served by <a href="http://www.nginx.org">nginx</a>.  I wrote the app using <a href="https://github.com/basho/webmachine">Webmachine</a>, written in <a href="http://www.erlang.org/">Erlang</a>.</p>
+        </p> 
+        <p>The images are mine unless otherwise noted.  Images I scrape from the web link back to their source.</p>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
