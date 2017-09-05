@@ -33,16 +33,16 @@
     </div>
 
 
-	<div class="container-fluid" >
+	<div class="container" >
     <div class="row justify-content-center">
-	<div class="col-md-5">
+	<div class="col-md-6">
 <br />
 <br />
 <br />
 <br />
 {% block body %}
   {% for entry in entries %}
-    <div class="card no-gutters">
+    <div class="card no-gutters" style="width: 550px;">
   <h5 class="card-header"> {{ entry.title }}</h5>
         {% if entry.image %}
       	<a href="/transmit/{{entry.id}}">
