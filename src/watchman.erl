@@ -16,6 +16,7 @@
 -behaviour(gen_server).
 -export([start/0, start_link/0]).
 -export([stop/0]).
+-export([checkstamp/1]).
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
 -record(state, {last, tref}).
 
@@ -86,7 +87,7 @@ checkstamp(Filename) ->
         [{timestamp, _,_}] ->
             Tstamp = db_tools:showall(timestamp),
             [#timestamp{id=_, modtime=Last}] = Tstamp,
-            case (string:equal(Last, Current)) of
+            case (string:equal([Last], [Current])) of
                 false -> updatestamp(Current, Filename);
                 true  -> ok
             end
