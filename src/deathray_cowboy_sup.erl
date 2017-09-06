@@ -7,4 +7,8 @@ start_link() ->
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 init([]) ->
-    {ok, { {one_for_one, 10, 10}, []} }.
+    %{ok, { {one_for_one, 10, 10}, []} },
+    {ok, { {one_for_one, 10, 10},
+    [{console,
+                 {watchman, start, []},
+                 permanent, 5000, worker, [watchman]}]}}.
