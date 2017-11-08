@@ -10,9 +10,6 @@ init(Req, Page) ->
 	Entries = lists:map(fun deathray_utils:format/1, Nentry),
 	PageTitle = "Channel" ++ N,
 
-    io:format("IDs ~p~n", [Ids]),
-    io:format("List ~p~n", [List]),
-
   {ok, ResponseBody} = templates_page:render([{entries, Entries}, {pagetitle, PageTitle}, {pages, Pages}, {channel, Y}]),
   Reply = cowboy_req:reply(200, [{<<"content-type">>, <<"text/html">>}], ResponseBody, Req),
   {ok, Reply, Page}.
